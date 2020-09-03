@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:javaee="http://java.sun.com/xml/ns/javaee"
+         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+  <display-name>Yzy Web Application</display-name>
+  <servlet>
+    <servlet-name>yzymvc</servlet-name>
+    <servlet-class>com.yang.framework.servlet.YzyDispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>myConfigLocation</param-name>
+      <param-value>application.properties</param-value>
+    </init-param>
+    <!--标记容器是否在启动的时候就加载这个servlet(实例化并调用其init()方法)-->
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>yzymvc</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+</web-app>

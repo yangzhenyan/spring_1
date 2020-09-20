@@ -1,2 +1,2 @@
 # spring
-手写spring ioc（仅个人学习）
+手写spring 乞丐版（仅个人学习）
